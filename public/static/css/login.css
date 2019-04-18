@@ -1,0 +1,8 @@
+*{padding:0;margin:0;}
+a{text-decoration:none;}
+ul{list-style:none}
+img{border:0;}
+
+header{width:100%;height:100px;background:pink;}
+footer{width:100%;height:100px;}
+.body{width:100%;height:600px;background:url(/static/image/228e6fea-0677-225a-9a0f-9e732c127274.jpg);background-size: 100% 100%;}

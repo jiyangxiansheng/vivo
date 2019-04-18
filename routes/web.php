@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//后台登录页面
+//
+Route::group([],function () {
+
+	Route::get('/admins','Admin\Indexcontroller@index');
+});
