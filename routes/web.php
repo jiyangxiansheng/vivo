@@ -11,16 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'Home\IndexController@index');
 
 //后台登录页面
 //
 Route::group([],function () {
 
-	Route::get('/admins','Admin\Indexcontroller@index');
-});
-Route::group([],function () {
-	Route::get('/home', 'Home\Indexcontroller@index');
+	Route::get('/admins','Admin\IndexController@index');
 });
