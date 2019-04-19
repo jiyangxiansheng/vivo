@@ -22,5 +22,5 @@ Route::group([],function () {
 	Route::get('/admins','Admin\Indexcontroller@index');
 });
 Route::group([],function () {
-	Route::get('/home', 'Home\Homecontroller@index');
+	Route::get('/home', 'Home\Indexcontroller@index');
 });
