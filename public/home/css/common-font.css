@@ -1,0 +1,57 @@
+﻿@charset "UTF-8";
+@font-face {
+  font-family: "方正悠黑简体_纤";
+  src: url("FZYHJT_X.ttf");
+  src: url("FZYHJT_X.eot?#font-spider") format("embedded-opentype"), url("FZYHJT_X.woff") format("woff"), url("FZYHJT_X.ttf") format("truetype"), url("FZYHJT_X.svg") format("svg");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "方正悠黑简体";
+  src: url("FZYHJT.ttf");
+  src: url("FZYHJT.eot?#font-spider") format("embedded-opentype"), url("FZYHJT.woff") format("woff"), url("FZYHJT.ttf") format("truetype"), url("FZYHJT.svg") format("svg");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: "Avenir Next ST";
+  src: url("AvenirNext.ttf");
+  src: url("AvenirNext.eot?#font-spider") format("embedded-opentype"), url("AvenirNext.woff") format("woff"), url("AvenirNext.ttf") format("truetype"), url("AvenirNext.svg") format("svg");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url("iconfont.ttf");
+  src: url("iconfont.eot?#font-spider") format("embedded-opentype"), url("iconfont.woff") format("woff"), url("iconfont.ttf") format("truetype"), url("iconfont.svg") format("svg");
+  font-style: normal;
+  font-weight: 200;
+}
+
+.lt8 body {
+  font-family: 'Avenir Next ST','Microsoft YaHei' !important;
+}
+
+.lt8 .vc-main-promos a .title {
+  font-family: 'Avenir Next ST','Microsoft YaHei' !important;
+}
+
+.fontlab-uimix {
+  font-family: 'Avenir Next ST',"方正悠黑简体_纤";
+}
+
+.vc-main-promos a .title {
+  font-family: 'Avenir Next ST',"Microsoft YaHei", "PingFang SC";
+}
+
+.gb-vivo-h-nav, .v_h_usercenter, .gb-vivo-s-nav {
+  font-family: 'Avenir Next ST',"方正悠黑简体_纤";
+}
+
+.windows #vivo-foot-wrap #gb-vivo-foot .gb-foot-copyright .copyright-text {
+  font-family: 'Avenir Next ST',"Microsoft YaHei", "PingFang SC";
+}
+
+#vivo-foot-path, #gb-vivo-foot {
+  font-family: 'Avenir Next ST',"Microsoft YaHei", "PingFang SC";
+}

@@ -1,0 +1,1022 @@
+﻿html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: #333;
+    background: #f7f7f7;
+    font-family: "Microsoft YaHei",Arial;
+}
+
+.pay-head-wrap {
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    z-index: 999;
+    background-color: rgba(26, 26, 26, .9);
+}
+
+.pay-content {}
+
+.content-wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.content-shop {
+    padding-top: 69px;
+    height: 110px;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wrapper .logo {
+    display: block;
+    margin: 0 auto;
+    width: 192px;
+    height: 56px;
+    background: url(../images/vvshop-sprites.png) no-repeat -72px -144px;
+}
+
+.wrapper .promise {
+    padding: 15px 0;
+    font-size: 0;
+    text-align: center;
+}
+
+.wrapper .promise a {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 38px;
+    position: relative;
+    z-index: 0;
+}
+
+.wrapper .promise a:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 6px;
+    height: 21px;
+    width: 18px;
+    background: url(../images/vvshop-sprites.png) no-repeat;
+}
+
+.wrapper .promise .real:before {
+    background-position: -1px -47px;
+}
+
+.wrapper .promise .post:before {
+    background-position: -37px -48px;
+}
+
+.wrapper .promise .refund:before {
+    background-position: -37px -10px;
+}
+
+.wrapper .promise .after-sale:before {
+    background-position: -1px -9px;
+    width: 20px;
+}
+
+.wrapper .promise span {
+    display: inline-block;
+    vertical-align: top;
+    color: #57646d;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.content-title {
+    height: 66px;
+    text-align: center;
+    line-height: 66px;
+    font-size: 22px;
+    background: #fff;
+}
+
+.content-order {
+    margin-top: 18px;
+    padding-left: 130px;
+    padding-right: 35px;
+    background-color: #fff;
+    background-image: url(../images/done.png);
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+    background-position: 35px 36px;
+}
+
+.order-top {
+    padding: 16px 0;
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.order-top h3 {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 40px;
+}
+
+.order-top h3 .text-red {
+    color: #f51919;
+}
+
+.order-top p {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.order-top p .text-blue {
+    color: #0082c9;
+}
+
+.order-detail {
+    padding-top: 10px;
+    padding-bottom: 24px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #808080;
+}
+
+.order-detail .spread-btn {
+    position: relative;
+    width: 100px;
+    color: #333;
+    cursor: pointer;
+}
+
+.order-detail .spread-btn::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background: url('../images/godown.png') 0 0 no-repeat;
+    background-size: 100%;
+    transition: all .2s;
+}
+
+.order-detail .spread-btn.active::after {
+    transform: rotate(180deg);
+}
+
+.order-detail .detail-show {
+    display: none;
+}
+
+.order-detail li {
+    overflow: hidden;
+}
+
+.order-detail .order-add {
+    overflow: hidden;
+}
+
+.order-detail dl dt,
+dd {
+    float: left;
+}
+
+.pay-method-wrap {
+    margin-top: 18px;
+    padding: 36px;
+    background: #fff;
+}
+
+.pay-method {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.pay-method.hide {
+    display: none;
+}
+
+.pay-method h3 {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.pay-method .pay-installment {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.pay-method .items-wrap {
+    /* overflow: hidden; */
+}
+
+.pay-method .item {
+    position: relative;
+    float: left;
+    margin-top: 40px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.item .item-detail {
+    width: 245px;
+    height: 86px;
+    border-radius: 4px;
+    border: solid 1px #cccccc;
+}
+
+.item.activity .item-detail {}
+
+
+
+
+
+
+/* 支付选项样式 */
+
+.item .item-detail .pay-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    color: #333;
+}
+.pay-item .dl-center {
+    width: 146px;
+    height: 34px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    line-height: 34px;
+}
+.alipay .pay-item .dl-center {
+	width: 200px;
+}
+.pay-item dt {
+    float: left;
+    width: 34px;
+    height: 34px;
+}
+
+.pay-item dd {
+    float: left;
+    width: 100px;
+    margin-left: 12px;
+}
+
+.pay-item dt img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.pay-item .recommend-slot {
+    width: 38px;
+    height: 21px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 6px;
+    background: url(../images/recommend.png);
+}
+
+
+
+
+/* 活动支付选项样式 */
+
+.item.activity .item-detail .pay-item {
+    height: 60px;
+    font-size: 16px;
+}
+.item.activity .pay-item .dl-center {
+    width: 118px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    line-height: 26px;
+}
+.item.activity.alipay .pay-item .dl-center {
+    width: 170px;
+}
+.item.activity .pay-item dt {
+    width: 26px;
+    height: 26px;
+}
+
+.item.activity .pay-item dd {
+    width: 80px;
+}
+.item.activity .pay-item .recommend-slot {
+    margin-top: 2px;
+}
+
+
+
+
+
+
+
+/* 文案样式 */
+
+.item .activity-text {
+    display: none;
+}
+
+
+
+
+
+
+
+/* 活动文案样式 */
+
+.item.activity .activity-text {
+    display: block;
+    width: 245px;
+    height: 26px;
+    background-image: linear-gradient(134deg,
+    #ff763c 0%,
+    #ff0f51 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff763c', endColorstr='#ff0f51',GradientType=1 );
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    line-height: 26px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+:root {filter:none;}
+
+.activity-text span {
+    display: block;
+    width: 185px;
+    height: 26px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.pay-method .item .item-detail:hover {
+    border-color: rgb(255, 170, 170);
+}
+
+.pay-method .item .item-detail.active {
+    border-color: #f81100;
+}
+
+.pay-method .item .item-code {
+    display: none;
+    position: relative;
+    width: 245px;
+    height: 260px;
+    margin-top: 20px;
+    padding-top: 20px;
+    background: #fff;
+    box-shadow: 0px 0px 5px 3px #eee;
+    cursor: default;
+}
+
+.pay-method .item .item-code::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    transform: translateX(-7px) rotate(45deg);
+    background: #fff;
+    box-shadow: -2px -2px 1px 1px #eee;
+}
+
+.item .item-code .qrcode-wrap {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto;
+}
+
+.item .item-code .qrcode-wrap iframe,
+img {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.item .item-code .qrcode-wrap iframe {
+    display: none;
+}
+
+.item.alipay .item-code .qrcode-wrap img {
+    display: none;
+}
+
+.item.alipay .item-code .qrcode-wrap iframe {
+    display: block;
+}
+
+.item .item-code .prcode-text {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.item .item-code .load-btn {
+    width: 125px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 12px;
+    background: #fff;
+    border: 1px solid #008ddc;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    color: #008ddc;
+    cursor: pointer;
+}
+
+.item.wechat .item-code .load-btn {
+    display: none;
+}
+
+.item .item-code .prcode-hint {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #262626;
+}
+
+.item .item-code .prcode-hint .refresh {
+    color: #008ddc;
+    cursor: pointer;
+}
+
+.item.alipay .item-code .prcode-hint {
+    display: none;
+}
+
+
+
+
+
+
+
+/* 花呗分期详情 */
+
+.pay-method .item .right-top {
+    display: none;
+}
+
+.pay-method .item.no-interest .right-top {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    width: 46px;
+    height: 24px;
+    background: url(../images/no_interest.png);
+    color: #fff;
+}
+
+
+
+
+
+
+
+/* 分期详情 */
+
+.installment-detail {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding-top: 20px;
+    padding-left: 34px;
+    margin-top: 20px;
+    background-color: #f7f7f7;
+}
+
+.installment-detail::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 120px;
+    width: 14px;
+    height: 14px;
+    transform: translateX(-7px) rotate(45deg);
+    background: #f7f7f7;
+}
+
+.installment-detail-hint {
+    font-size: 15px;
+    color: #666;
+}
+
+.installment-items {
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/* 分期选项样式 */
+
+.installment-item {
+    box-sizing: border-box;
+    float: left;
+    width: 330px;
+    height: 90px;
+    margin-right: 36px;
+    padding: 20px 0 20px 30px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.installment-item:hover {
+    border-color: #999;
+}
+
+.installment-item:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.installment-item.active {
+    border-color: #000;
+}
+
+.installment-item .stages-num {
+    float: left;
+    width: 45px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+
+.installment-item .stages-num .no-interest-label {
+    display: none;
+}
+
+
+
+
+
+
+
+/* 当有免息时 */
+
+.installment-item.no-interest .stages-num p {
+    height: 30px;
+    line-height: 20px;
+}
+
+.installment-item.no-interest .stages-num .no-interest-label {
+    display: block;
+    width: 38px;
+    height: 20px;
+    margin-left: 3px;
+    background-image: linear-gradient(180deg,
+    #fd1a1a 0%,
+    #e00002 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fd1a1a', endColorstr='#e00002',GradientType=1 );
+    border-radius: 2px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+}
+
+:root {filter:none;}
+
+.installment-item .line-btw {
+    float: left;
+    width: 0px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 30px;
+    border-left: 1px solid #ccc;
+}
+
+.installment-item .stages-detail {
+    float: left;
+    width: 220px;
+    height: 50px;
+    text-align: center;
+}
+.stages-detail .service-charge {
+    color: #f11f22;
+}
+
+.installment-item .stages-detail.hide {
+    display: none;
+}
+
+.installment-item .stages-detail p:nth-of-type(1) {
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+}
+
+.installment-item .stages-detail p:nth-of-type(2) {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+
+
+
+
+
+
+/* 支付按钮样式 */
+
+.pay-btn-wrap {
+    width: 1120px;
+    height: 58px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.voucher-wrap {
+    float: left;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.voucher-wrap .voucher-check {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background: url('../images/new-checkbox.png') 0 100% no-repeat;
+    background-size: 100% auto;
+}
+
+.voucher-wrap .voucher-check.checked {
+    background-position: 0 0;
+}
+
+.voucher-wrap .voucher-text {
+    float: left;
+    font-size: 16px;
+}
+
+.voucher-wrap .voucher-text.hide {
+    display: none;
+}
+
+.voucher-text .voucher-name,
+i,
+.voucher-used,
+.voucher-surplus {
+    float: left;
+}
+
+.voucher-text i {
+    position: relative;
+    top: 6px;
+    height: 12px;
+    width: 1px;
+    margin: 0 10px;
+    background: #333;
+}
+
+.voucher-text .voucher-used em {
+    font-style: normal;
+    color: #ff3f48;
+}
+
+.voucher-text .voucher-surplus {
+    margin-left: 10px;
+}
+
+.pay-btn {
+    float: right;
+    width: 170px;
+    height: 48px;
+    margin-top: 10px;
+    border-radius: 24px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 20px;
+    background-color: #f81100;
+    color: #fff;
+    cursor: pointer;
+}
+
+.pay-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pay-amount {
+    float: right;
+    margin-right: 24px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.pay-amount.hide {
+    display: none;
+}
+
+.pay-amount .amount-num {
+    font-size: 32px;
+    color: #f81100;
+}
+
+.pay-amount .installment-num {
+    color: #808080;
+}
+.pay-amount .amount-num-wrap{
+    margin-top: 10px;
+}
+.pay-amount.has-fee .amount-num-wrap{
+    margin-top: 0;
+}
+
+
+
+
+
+
+/* 遮罩层 */
+
+.shade-wrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background-color: rgba(30, 30, 30, .3);
+}
+
+
+
+
+
+
+
+/* 弹出窗 */
+.shade-wrap .common-box p:nth-child(1) {
+    margin-top: 56px;
+    font-size: 24px;
+}
+.shade-wrap .common-box p:nth-child(2) {
+    margin-top: 60px;
+    font-size: 20px;
+}
+.shade-wrap .common-box p:nth-child(3) {
+    margin-top: 50px;
+    font-size: 20px;
+}
+.shade-wrap .common-box .box-btn-wrap {
+    margin-top: 60px;
+}
+.shade-wrap .message-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    width: 726px;
+    height: 518px;
+    background-color: #ffffff;
+}
+.message-box p {
+    text-align: center;
+}
+.message-box p:nth-child(1) {
+    margin-top: 56px;
+    font-size: 22px;
+}
+
+.message-box p:nth-child(2) {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.message-box p:nth-child(2) a {
+    color: #0e78d3;
+    text-decoration: none;
+}
+
+.message-box img {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+    margin-top: 35px;
+}
+
+.message-box p:nth-child(4) {
+    margin-top: 34px;
+    font-size: 15px;
+}
+
+.message-box p:nth-child(5) {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.message-box .box-btn-wrap {
+    margin: 0 auto;
+    width: 340px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+.message-box .box-btn-wrap .box-btn {
+    width: 152px;
+    height: 38px;
+    border-radius: 19px;
+    font-size: 18px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.message-box .box-btn-wrap .box-btn.complete-btn {
+    float: left;
+    border: 1px solid #008ddc;
+    background-color: #008ddc;
+    color: #fff;
+}
+
+.message-box .box-btn-wrap .box-btn.complete-btn:hover {
+    border: 1px solid #1988f0;
+    background-color: #1988f0;
+}
+
+.message-box .box-btn-wrap .box-btn.other-btn {
+    float: right;
+    border: 1px solid #e5e5e5;
+    color: #808080;
+}
+
+.message-box .box-btn-wrap .box-btn.other-btn:hover {
+    border: 1px solid #aaa;
+}
+/* 鼓励金手机安全验证弹窗 */
+.message-box.voucher-box .voucher-box-title {
+    margin-top: 56px;
+    font-size: 24px;
+}
+.message-box.voucher-box .voucher-box-content {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.message-box.voucher-box .voucher-box-content .voucher-box-explain {
+    margin-top: 30px;
+    font-size: 20px;
+}
+.message-box.voucher-box .voucher-box-content .voucher-box-phone {
+    margin-top: 30px;
+    font-size: 20px;
+}
+.message-box.voucher-box .voucher-box-content .voucher-box-code {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+.voucher-box-code  .voucher-code-input {
+    width: 240px;
+    height: 36px;
+    padding-left: 10px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+.voucher-box-code  .voucher-code-btn {
+    margin-left: 20px;
+    color: #1988f0;
+    cursor: pointer;
+}
+.voucher-box-code  .voucher-code-btn.disabled {
+    color: #959a9b;
+}
+.voucher-box-code  .err-tip {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #e62132;
+}
+.message-box.voucher-box .voucher-box-btn {
+    width: 162px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #008ddc;
+    cursor: pointer;
+    color: #fff;
+}
+.message-box.voucher-box .voucher-box-btn.disabled {
+    background-color: #e5e5e5;
+}
+.message-box.voucher-change {
+    width: 400px;
+    height: 300px;
+}
+.message-box.voucher-change .box-btn-wrap .box-btn.other-btn {
+    float: none;
+    margin: 0 auto;
+    background-color: #008ddc;
+    border-color: #008ddc;
+    color: #fff;
+}
+
+
+/* X取消按钮 */
+
+.message-box .cancel-btn {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.message-box .cancel-btn span:nth-child(1) {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    background-color: #666;
+    transform-origin: center;
+    -ms-transform: translate(0, 8px) rotate(45deg); 	/* IE 9 */
+    -moz-transform: translateY(8px) rotateZ(45deg);	/* Firefox */
+    -webkit-transform: translateY(8px) rotateZ(45deg); /* Safari 和 Chrome */
+    -o-transform: translateY(8px) rotateZ(45deg); 	/* Opera */
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+.message-box .cancel-btn span:nth-child(2) {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 1px;
+    background-color: #666;
+    transform-origin: center;
+    -ms-transform: translate(0, 8px) rotate(-45deg);/* IE 9 */
+    -moz-transform: translateY(8px) rotateZ(-45deg);	/* Firefox */
+    -webkit-transform: translateY(8px) rotateZ(-45deg); /* Safari 和 Chrome */
+    -o-transform: translateY(8px) rotateZ(-45deg); /* Opera */
+    transform: translateY(8px) rotateZ(-45deg);
+}
+
+.message-box .cancel-btn:hover span {
+    background-color: #48b6f5;
+}
+
+#fixedNav.fixed {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 19;
+    width: 100%;
+    padding-bottom: 34px;
+    background: #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.09);
+}
+
+
+
+/* 页面底部 */
+
+.pay-footer-wrap {
+}
